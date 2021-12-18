@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'leinster-blue' : '#005daa',
-        'leinster-navy' : '#013a81',
-        'leinster-gold' : '#eeb111',
-        'leinster-grey' : '#9fa1a4',
+        'xmas-pink' : '#EFDCDA',
+        'xmas-green' : '#1C7C62',
+        'xmas-dark-green' : '#0E4435',
+        'xmas-light-green' : '#a6c3b6',
+        'xmas-red' : '#EC4247',
       },
       fontFamily:{
         body:  ['"Libre Franklin"'],
