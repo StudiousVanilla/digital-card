@@ -1,1 +1,1 @@
-A lil' bitta *Blue Magic*
+A dash through the Irish advertising delights of Christmases past
