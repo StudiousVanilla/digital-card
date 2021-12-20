@@ -1,15 +1,12 @@
-// import { useState } from "react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import homeImg from "../assets/homeImg.svg";
 
 const YearSelect = () => {
 
-    // const [year, setYear] = useState('2021')
-
-    // const handleChange = (e) => {
-    //     setYear(e.target.value)
-    // }
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const introRef = useRef()
 

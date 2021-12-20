@@ -37,6 +37,7 @@ const YearContent = () => {
       snapshot.docs.forEach((doc) => {
         content.push({ ...doc.data(), id: doc.id })
         setContent(content[0])
+        window.scrollTo(0, 0)
       })
     })
     // eslint-disable-next-line
