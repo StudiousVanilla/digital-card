@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import homeImg from "../assets/homeImg.svg";
+import LightGreenDiamond from "../assets/LightGreenDiamond.svg";
 
 const YearSelect = () => {
 
@@ -24,9 +25,22 @@ const YearSelect = () => {
 
                 <img src={homeImg} alt="Home banner" className="w-full" />
 
-                <div className="w-2/3 -mt-6">
+                <div className="w-3/4 mb-4">
                     <p className="text-xmas-green text-3xl xs:text-4xl mb-4">THE IRISH CHRISTMAS AD</p>
-                    <p className="text-xmas-red text-4xl xs:text-6xl">TIME MACHINE</p>
+                    <div className="w-full flex justify-evenly">
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-6 xs:w-8 animate-wiggle" />
+                        <p className="text-xmas-red text-5xl xs:text-6xl">TIME</p>
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-6 xs:w-8 animate-wiggle" />
+                    </div>
+                    <p className="text-xmas-red text-5xl xs:text-6xl mb-2">MACHINE</p>
+                    <div className="w-f flex justify-evenly">
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-4 xs:w-5 animate-wiggle" />
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-4 xs:w-5 animate-wiggle" />
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-4 xs:w-5 animate-wiggle" />
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-4 xs:w-5 animate-wiggle" />
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-4 xs:w-5 animate-wiggle" />
+                        <img src={LightGreenDiamond} alt="Green Diamond" className="w-4 xs:w-5 animate-wiggle" />
+                    </div>
                 </div>
 
                 <div className="xs:mb-20 mb-14 text-xmas-green animate-pulse" onClick={handleArrowClick}>
@@ -52,6 +66,9 @@ const YearSelect = () => {
 
 
             <div className="w-full bg-xmas-dark-green pb-16 rounded-b-3xl mb-6">
+                <Link to='/2021'>
+                    <img src={`/bigYears/img2021.svg`} alt="2021" className="w-full" />
+                </Link>
                 <Link to='/2020'>
                     <img src={`/bigYears/img2020.svg`} alt="2020" className="w-full" />
                 </Link>
@@ -124,6 +141,10 @@ const YearSelect = () => {
                 <Link to='/1982'><img src={`/bigYears/img1982.svg`} alt="1982" className="w-full" /></Link>
                 <Link to='/1981'><img src={`/bigYears/img1981.svg`} alt="1981" className="w-full" /></Link>
                 <Link to='/1980'><img src={`/bigYears/img1980.svg`} alt="1980" className="w-full" /></Link>
+                
+                {/* 60's - 70's */}
+                
+                <Link to='/1979'><img src={`/bigYears/img1979.svg`} alt="1979" className="w-full" /></Link>
                 
 
 

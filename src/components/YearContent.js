@@ -104,7 +104,7 @@ const YearContent = () => {
 
         <div className='w-1/3 h-12 flex items-center justify-center'>
 
-          {year === '1980' &&
+          {year === '1979' &&
             <Link to='/' className="w-full">
               <div className="flex justify-center items-center h-11 bg-xmas-dark-green text-xmas-red">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -114,7 +114,7 @@ const YearContent = () => {
             </Link>
           }
 
-          {year !== '1980' &&
+          {year !== '1979' &&
             <Link to={`/${year - 1}`}>
               <img src={`/years/year${year - 1}.svg`} alt="previous year" className='h-12' />
             </Link>

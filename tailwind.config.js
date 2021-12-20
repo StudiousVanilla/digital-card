@@ -6,8 +6,17 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xs': '400px',
+        'xs': '350px',
         ...defaultTheme.screens,
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-8deg)' },
+          '50%': { transform: 'rotate(8deg)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 3s ease-in-out infinite',
       },
       colors:{
         'xmas-pink' : '#EFDCDA',
