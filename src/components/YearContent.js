@@ -45,7 +45,7 @@ const YearContent = () => {
 
   return (
 
-    <div className='h-screen w-full flex flex-col justify-start bg-xmas-pink pt-6'>
+    <div className='w-full flex flex-col justify-start bg-xmas-pink pt-6'>
 
       <img src={topDots} alt="Dots" className="" />
 
@@ -56,12 +56,18 @@ const YearContent = () => {
       {content !== null &&
         <div className='h-screen px-4 flex flex-col justify-evenly items-center'>
 
-          <p className="p-3 text-md mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iste possimus quas maiores, dolorum totam sunt asperiores dolore aliquam, est, quos quisquam consectetur ullam nisi non corrupti repellendus similique vero.</p>
+          <p className="p-3 text-md mb-1">{content.story}</p>
+
+          {/* youtube */}
 
           <div className="flex justify-center items-center border-xmas-green border-2 
-          w-full h-2/4">
+          w-full h-1/3">
+
             <iframe src={content.video} className="h-full w-full p-0 m-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
           </div>
+
+
 
         </div>
       }
@@ -71,7 +77,7 @@ const YearContent = () => {
 
         <div className='w-1/3 h-12 flex items-center justify-center'>
 
-          {year === '2020' &&
+          {year === '2021' &&
             <Link to='/' className="w-full">
               <div className="flex justify-center items-center h-11 bg-xmas-red text-xmas-dark-green">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -81,7 +87,7 @@ const YearContent = () => {
             </Link>
           }
 
-          {year !== '2020' &&
+          {year !== '2021' &&
             <Link to={`/${year - 0 + 1}`}>
               <img src={`/years/year${year - 0 + 1}.svg`} alt="next year" className='h-12' />
             </Link>
@@ -97,7 +103,7 @@ const YearContent = () => {
 
         <div className='w-1/3 h-12 flex items-center justify-center'>
 
-          {year === '2010' &&
+          {year === '1980' &&
             <Link to='/' className="w-full">
               <div className="flex justify-center items-center h-11 bg-xmas-dark-green text-xmas-red">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -107,7 +113,7 @@ const YearContent = () => {
             </Link>
           }
 
-          {year !== '2010' &&
+          {year !== '1980' &&
             <Link to={`/${year - 1}`}>
               <img src={`/years/year${year - 1}.svg`} alt="previous year" className='h-12' />
             </Link>
