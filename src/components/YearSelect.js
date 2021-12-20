@@ -150,10 +150,10 @@ const YearSelect = () => {
 
             </div>
 
-            <div className="mb-10">
-                <p className="text-3xl mb-2 text-xmas-dark-green">MERRY CHRISTMAS!</p>
-                <p className="text-xl mb-2 text-xmas-green">FROM DAN, OISÍN & AOIFE</p>
-                <p className="text-md mb-2 text-xmas-light-green italic">Design, Development & Content</p>
+            <div className="mb-10 w-2/3">
+                <p className="text-xl mb-2 text-xmas-dark-green">MERRY CHRISTMAS!</p>
+                <p className="xs:text-md text-sm mb-2 text-xmas-green">FROM DAN, OISÍN & AOIFE</p>
+                <p className="text-xs mb-2 text-xmas-light-green italic">*SOME DATES & IRISHNESS ARE SUBJECT TO CONFIRMATION</p>
             </div>
 
 

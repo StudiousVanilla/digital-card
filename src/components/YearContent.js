@@ -46,34 +46,36 @@ const YearContent = () => {
 
   return (
 
-    <div className='w-full flex flex-col justify-start bg-xmas-pink pt-6'>
+    <div className='h-screen w-full flex flex-col justify-start bg-xmas-pink pt-6'>
 
-      <img src={topDots} alt="Dots" className="" />
+      <div className='h-1/4'>
+        <img src={topDots} alt="Dots" className="" />
 
-      <img src={`/bigYears/img${year}.svg`} alt={year} className="w-full my-4" />
+        <img src={`/bigYears/img${year}.svg`} alt={year} className="w-full my-4" />
 
-      <img src={botDots} alt="Dots" className="" />
+        <img src={botDots} alt="Dots" className="mb-2" />
+      </div>
 
       {content !== null &&
-        <div className='h-screen px-4 flex flex-col justify-evenly items-center'>
+        <div className='h-2/3 px-4 flex flex-col items-center justify-evenly'>
 
-          <p className="p-3 text-md mb-1">{content.story}</p>
-
-          {/* youtube */}
-
-          <div className="flex justify-center items-center border-xmas-green border-2 
-          w-full h-1/3">
-
-            <iframe src={content.video} className="h-full w-full p-0 m-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
+          <div className='h-1/3 flex items-center justify-center'>
+            <p className="p-3 text-sm xs:text-base">{content.story}</p>
           </div>
 
+          {/* youtube */}
+          <div className="w-full h-2/3 flex justify-center items-center ">
+            <div className='w-full h-2/3 border-xmas-green border-2'>
+              <iframe src={content.video} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            </div>
 
-
+          </div>
         </div>
+        
       }
+      
 
-      <footer className="h-12 flex items-center justify-center my-8 bg-xmas-pink">
+      <footer className="h-12 w-full flex items-center justify-center xs:mb-2 mb-0 bg-xmas-pink">
 
 
         <div className='w-1/3 h-12 flex items-center justify-center'>
