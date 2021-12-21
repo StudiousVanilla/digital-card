@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      minHeight: {
+        '2/3': '66vh'
+      },
       screens: {
         'xs': '350px',
         ...defaultTheme.screens,

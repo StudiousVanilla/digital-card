@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import topDots from '../assets/topDots.svg'
 import botDots from '../assets/botDots.svg'
+import img1 from '../assets/img1.png'
+import img2 from '../assets/img2.png'
+import img3 from '../assets/img3.png'
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
 
@@ -48,7 +51,7 @@ const YearContent = () => {
 
     <div className='h-screen w-full flex flex-col justify-start bg-xmas-pink pt-6'>
 
-      <div className='h-1/4'>
+      <div className='h-1/4 w-full flex flex-col items-center mb-3'>
         <img src={topDots} alt="Dots" className="" />
 
         <img src={`/bigYears/img${year}.svg`} alt={year} className="w-full my-4" />
@@ -59,21 +62,62 @@ const YearContent = () => {
       {content !== null &&
         <div className='h-2/3 px-4 flex flex-col items-center justify-evenly'>
 
-          <div className='h-1/3 flex items-center justify-center'>
-            <p className="p-3 text-sm xs:text-base">{content.story}</p>
-          </div>
+
+          {year !== '1979' &&
+            <div className='h-1/3 flex items-center justify-center'>
+              <p className="p-1 text-sm xs:text-base">{content.story}</p>
+            </div>
+          }
+
+
 
           {/* youtube */}
-          <div className="w-full h-2/3 flex justify-center items-center ">
-            <div className='w-full h-2/3 border-xmas-green border-2'>
-              <iframe src={content.video} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          {year !== '1979' &&
+            <div className="w-full h-2/3 flex justify-center items-center ">
+              <div className='w-full h-2/3'>
+                <iframe src={content.video} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
             </div>
-
-          </div>
+          }
         </div>
-        
       }
-      
+
+
+
+
+
+      {/* 60s & 70s */}
+      {content !== null &&
+        <div className=' bg-xmas-pink px-2 flex flex-col items-center justify-evenly'>
+
+          {year === '1979' &&
+            <div className='h-fit w-4/5'>
+
+              <p className='text-xl'>The Irish Film Institute has a great archive of irish TV advertisments</p>
+
+              <p className='text-sm mb-6'>(these links will open in a new tab)</p>
+
+              <a href="https://ifiarchiveplayer.ie/macardles-christmas" target="blank_">
+                <img src={img1} alt="McCardles" />
+                <p className='mb-10'>McCardles Christmas Ad (1970s)</p>
+              </a>
+
+              <a href="https://ifiarchiveplayer.ie/players-no-6-christmas" target="blank_">
+                <img src={img2} alt="Players no6" />
+                <p className='mb-10'>Players No 6Christmas Ad (1970s)</p>
+              </a>
+
+              <a href="https://ifiarchiveplayer.ie/odlums-christmas" target="blank_">
+                <img src={img3} alt="Odlums" />
+                <p className='mb-10'>Odlums Christmas Ad (1960s)</p>
+              </a>
+
+            </div>
+          }
+
+        </div>
+      }
+
 
       <footer className="h-12 w-full flex items-center justify-center xs:mb-2 mb-0 bg-xmas-pink">
 

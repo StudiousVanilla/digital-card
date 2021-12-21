@@ -6,7 +6,7 @@ const Layout = () => {
 
 
     return ( 
-        <main className="flex flex-col h-screen">
+        <main className="flex flex-col">
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<YearSelect/>}/>
