@@ -14,7 +14,7 @@ import { getFirestore, collection, getDocs, query, where } from "firebase/firest
 
 const YearContent = () => {
 
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState({ extras: false })
   const { year } = useParams()
 
   const firebaseConfig = {
@@ -59,11 +59,12 @@ const YearContent = () => {
         <img src={botDots} alt="Dots" className="mb-2" />
       </div>
 
-      {content !== null &&
+      {/* normal pages */}
+      {!content.extras &&
         <div className='h-2/3 px-4 flex flex-col items-center justify-evenly'>
 
 
-          {year !== '1979' &&
+          {!content.extras &&
             <div className='h-1/3 flex items-center justify-center'>
               <p className="p-1 text-sm xs:text-base">{content.story}</p>
             </div>
@@ -72,45 +73,91 @@ const YearContent = () => {
 
 
           {/* youtube */}
-          {year !== '1979' &&
+          {!content.extras &&
             <div className="w-full h-2/3 flex justify-center items-center ">
               <div className='w-full h-2/3'>
                 <iframe src={content.video} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </div>
           }
+
+
         </div>
       }
 
 
+      {/* Special pages */}
+      {content.extras &&
+        <div className='bg-xmas-pink px-2 flex flex-col items-center justify-evenly'>
 
 
-
-      {/* 60s & 70s */}
-      {content !== null &&
-        <div className=' bg-xmas-pink px-2 flex flex-col items-center justify-evenly'>
-
-          {year === '1979' &&
+          {content.extras &&
             <div className='h-fit w-4/5'>
 
-              <p className='text-xl'>The Irish Film Institute has a great archive of irish TV advertisments</p>
+              {/* 60s / 70s */}
+              {year === '1979' &&
+                <div>
+                  <p className='text-xl'>The Irish Film Institute has a great archive of irish TV advertisments</p>
 
-              <p className='text-sm mb-6'>(these links will open in a new tab)</p>
+                  <p className='text-sm mb-6'>(these links will open in a new tab)</p>
 
-              <a href="https://ifiarchiveplayer.ie/macardles-christmas" target="blank_">
-                <img src={img1} alt="McCardles" />
-                <p className='mb-10'>McCardles Christmas Ad (1970s)</p>
-              </a>
+                  <a href="https://ifiarchiveplayer.ie/macardles-christmas" target="blank_">
+                    <img src={img1} alt="McCardles" />
+                    <p className='mb-10'>McCardles Christmas Ad (1970s)</p>
+                  </a>
 
-              <a href="https://ifiarchiveplayer.ie/players-no-6-christmas" target="blank_">
-                <img src={img2} alt="Players no6" />
-                <p className='mb-10'>Players No 6Christmas Ad (1970s)</p>
-              </a>
+                  <a href="https://ifiarchiveplayer.ie/players-no-6-christmas" target="blank_">
+                    <img src={img2} alt="Players no6" />
+                    <p className='mb-10'>Players No 6Christmas Ad (1970s)</p>
+                  </a>
 
-              <a href="https://ifiarchiveplayer.ie/odlums-christmas" target="blank_">
-                <img src={img3} alt="Odlums" />
-                <p className='mb-10'>Odlums Christmas Ad (1960s)</p>
-              </a>
+                  <a href="https://ifiarchiveplayer.ie/odlums-christmas" target="blank_">
+                    <img src={img3} alt="Odlums" />
+                    <p className='mb-10'>Odlums Christmas Ad (1960s)</p>
+                  </a>
+                </div>
+              }
+
+              {/* pages with extra videos - 2020, 2017, 2016, 2015 */}
+              {year !== '1979' &&
+                <div>
+
+                  <div className='h-1/3 flex items-center justify-center pb-4'>
+                    <p className="p-1 text-sm xs:text-base">{content.story}</p>
+                  </div>
+
+                  <div className="w-full h-2/3 flex justify-center items-center pb-10">
+                    <div className='w-full h-2/3'>
+                      <iframe src={content.video} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    </div>
+                  </div>
+
+
+                  <div className='h-1/3 flex items-center justify-center pb-4'>
+                    <p className="p-1 text-sm xs:text-base">{content.extraStory}</p>
+                  </div>
+
+                  <div className="w-full h-2/3 flex justify-center items-center pb-10">
+                    <div className='w-full h-2/3'>
+                      <iframe src={content.extraLink1} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    </div>
+                  </div>
+
+                  {content.extraLink2 &&
+                    <div className="w-full h-2/3 flex justify-center items-center pb-10">
+                      <div className='w-full h-2/3'>
+                        <iframe src={content.extraLink2} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                      </div>
+                    </div>
+                  }
+
+
+
+
+                </div>
+              }
+
+
 
             </div>
           }
