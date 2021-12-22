@@ -92,11 +92,11 @@ const YearContent = () => {
 
 
           {content.extras &&
-            <div className='h-fit w-4/5'>
+            <div className='h-fit w-full'>
 
               {/* 60s / 70s */}
               {year === '1979' &&
-                <div>
+                <div className='w-4/5 m-auto'>
                   <p className='text-xl'>The Irish Film Institute has a great archive of irish TV advertisments</p>
 
                   <p className='text-sm mb-6'>(these links will open in a new tab)</p>
@@ -120,15 +120,15 @@ const YearContent = () => {
 
               {/* pages with extra videos - 2020, 2017, 2016, 2015 */}
               {year !== '1979' &&
-                <div>
+                <div className='w-full px-4'>
 
                   <div className='h-1/3 flex items-center justify-center pb-4'>
                     <p className="p-1 text-sm xs:text-base">{content.story}</p>
                   </div>
 
-                  <div className="w-full h-2/3 flex justify-center items-center pb-10">
-                    <div className='w-full h-2/3'>
-                      <iframe src={content.video} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <div className="w-full flex justify-center items-center pb-10">
+                    <div className='w-full'>
+                      <iframe src={content.video} className="h-36 xs:h-44 w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                   </div>
 
@@ -139,14 +139,14 @@ const YearContent = () => {
 
                   <div className="w-full h-2/3 flex justify-center items-center pb-10">
                     <div className='w-full h-2/3'>
-                      <iframe src={content.extraLink1} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                      <iframe src={content.extraLink1} className="h-36 xs:h-44 w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                   </div>
 
                   {content.extraLink2 &&
                     <div className="w-full h-2/3 flex justify-center items-center pb-10">
                       <div className='w-full h-2/3'>
-                        <iframe src={content.extraLink2} className="h-full w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe src={content.extraLink2} className="h-36 xs:h-44 w-full p-0 mb-0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                       </div>
                     </div>
                   }
