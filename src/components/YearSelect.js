@@ -57,7 +57,7 @@ const YearSelect = () => {
                 <p className="w-1/2 text-2xl xs:text-3xl  text-center">A DASH</p>
                 <p className="w-1/2 text-2xl xs:text-3xl text-center">THROUGH</p>
                 <p className="w-1/2 text-2xl xs:text-3xl text-center">THE IRISH</p>
-                <p className="w-1/2 text-2xl xs:text-3xl text-center">ADERTISING</p>
+                <p className="w-1/2 text-2xl xs:text-3xl text-center">ADVERTISING</p>
                 <p className="w-1/2 text-2xl xs:text-3xl text-center">DELIGHTS OF</p>
                 <p className="w-1/2 text-2xl xs:text-3xl text-center">CHRISTMASES</p>
                 <p className="w-1/2 mb-6 text-2xl xs:text-3xl text-center">PAST.</p>
