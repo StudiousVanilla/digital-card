@@ -115,9 +115,9 @@ const YearSelect = () => {
                 <Link to='/2002'><img src={`/bigYears/img2002.svg`} alt="2002" className="w-full" /></Link>
                 <Link to='/2001'><img src={`/bigYears/img2001.svg`} alt="2001" className="w-full" /></Link>
                 <Link to='/2000'><img src={`/bigYears/img2000.svg`} alt="2000" className="w-full" /></Link>
-                
+
                 {/* 90's */}
-                
+
                 <Link to='/1999'><img src={`/bigYears/img1999.svg`} alt="1999" className="w-full" /></Link>
                 <Link to='/1998'><img src={`/bigYears/img1998.svg`} alt="1998" className="w-full" /></Link>
                 <Link to='/1997'><img src={`/bigYears/img1997.svg`} alt="1997" className="w-full" /></Link>
@@ -128,9 +128,9 @@ const YearSelect = () => {
                 <Link to='/1992'><img src={`/bigYears/img1992.svg`} alt="1992" className="w-full" /></Link>
                 <Link to='/1991'><img src={`/bigYears/img1991.svg`} alt="1991" className="w-full" /></Link>
                 <Link to='/1990'><img src={`/bigYears/img1990.svg`} alt="1990" className="w-full" /></Link>
-                
+
                 {/* 80's */}
-                
+
                 <Link to='/1989'><img src={`/bigYears/img1989.svg`} alt="1989" className="w-full" /></Link>
                 <Link to='/1988'><img src={`/bigYears/img1988.svg`} alt="1988" className="w-full" /></Link>
                 <Link to='/1987'><img src={`/bigYears/img1987.svg`} alt="1987" className="w-full" /></Link>
@@ -141,18 +141,21 @@ const YearSelect = () => {
                 <Link to='/1982'><img src={`/bigYears/img1982.svg`} alt="1982" className="w-full" /></Link>
                 <Link to='/1981'><img src={`/bigYears/img1981.svg`} alt="1981" className="w-full" /></Link>
                 <Link to='/1980'><img src={`/bigYears/img1980.svg`} alt="1980" className="w-full" /></Link>
-                
+
                 {/* 60's - 70's */}
-                
+
                 <Link to='/1979'><img src={`/bigYears/img1979.svg`} alt="1979" className="w-full" /></Link>
-                
+
 
 
             </div>
 
             <div className="mb-10 w-2/3">
                 <p className="text-xl mb-2 text-xmas-dark-green">MERRY CHRISTMAS!</p>
-                <p className="xs:text-md text-sm mb-2 text-xmas-green">FROM DAN, OISÍN & AOIFE</p>
+                <p className="xs:text-md text-sm mb-2 text-xmas-green">FROM
+                    <a href="https://www.instagram.com/eamesjdan/?hl=en" rel="noreferrer" target="_blank" className="m-0 p-0"> DAN, </a>
+                    <a href="https://oisinbyrne.me" rel="noreferrer" target="_blank" className="m-0 p-0"> OISÍN </a>
+                     & AOIFE</p>
                 <p className="text-xs mb-2 text-xmas-light-green italic">*SOME DATES & IRISHNESS ARE SUBJECT TO CONFIRMATION</p>
             </div>
 
