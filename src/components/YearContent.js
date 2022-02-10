@@ -49,7 +49,7 @@ const YearContent = () => {
 
   return (
 
-    <div className='h-screen w-full flex flex-col justify-start bg-xmas-pink pt-6'>
+    <div className='sm:h-5/6 sm:rounded-xl h-screen w-full flex flex-col justify-start bg-xmas-pink pt-6'>
 
       <div className='h-1/4 w-full flex flex-col items-center mb-3'>
         <img src={topDots} alt="Dots" className="" />
